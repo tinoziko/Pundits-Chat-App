@@ -17,7 +17,7 @@ Frontend
 - React
 - Axios
 - Context API or custom hooks
-- TailwindCSS or any preferred styling method
+- TailwindCSS 
 
 Backend
 - Node.js
