@@ -33,11 +33,11 @@ const SettingsPage = () => {
               onClick={() => setTheme(t)}
             >
               <div data-theme={t} className="relative h-8 w-full rounded-md overflow-hidden" >
-                <div className="absolute inset-0 grid grid-cols-4 gap-px p-1">
-                  <div className="rounded bg-primary"></div>
-                  <div className="rounded bg-secondary"></div>
-                  <div className="rounded bg-accent"></div>
-                  <div className="rounded bg-neutral"></div>
+                <div className="absolute inset-0 grid grid-cols-3 gap-px p-1">
+                  <div className="rounded bg-black"></div>
+                  <div className="rounded bg-green-500"></div>
+                  <div className="rounded bg-white"></div>
+                
                 </div>
               </div>
               <span className="text-[11px] font-medium truncate w-full text-center">
@@ -57,7 +57,7 @@ const SettingsPage = () => {
                 {/* Chat Header */}
                 <div className="px-4 py-3 border-b border-base-300 bg-base-100">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-content font-medium">
+                    <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-primary-content font-medium">
                       J
                     </div>
                     <div>
@@ -77,14 +77,14 @@ const SettingsPage = () => {
                       <div
                         className={`
                           max-w-[80%] rounded-xl p-3 shadow-sm
-                          ${message.isSent ? "bg-primary text-primary-content" : "bg-base-200"}
+                          ${message.isSent ? "bg-green-500 text-primary-content" : "bg-base-200"}
                         `}
                       >
                         <p className="text-sm">{message.content}</p>
                         <p
                           className={`
                             text-[10px] mt-1.5
-                            ${message.isSent ? "text-primary-content/70" : "text-base-content/70"}
+                            ${message.isSent ? "text--content/70" : "text-base-content/70"}
                           `}
                         >
                           12:00 PM
@@ -104,7 +104,7 @@ const SettingsPage = () => {
                       value="This is a preview"
                       readOnly
                     />
-                    <button className="btn btn-primary h-10 min-h-0">
+                    <button className="btn bg-green-500 btn-ghost h-10 min-h-0">
                       <Send size={18} />
                     </button>
                   </div>
