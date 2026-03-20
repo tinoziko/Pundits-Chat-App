@@ -9,8 +9,7 @@ import cors from "cors";
 import {app, server} from "./lib/socket.js";
 import path from "path";
 
-
-const PORT = process.env.PORT 
+const PORT = process.env.PORT || 5001;
 const _dirname = path.resolve();
 
 app.use(cors({
@@ -28,10 +27,10 @@ app.use("/api/auth", authRoutes)
 app.use("/api/message", messageRoutes)
 
 if(process.env.NODE_ENV==="production"){
-    app.use(express.static(path.join(_dirname, "../frontend/dist")));
+    app.use(express.static(path.join(_dirname, "../Frontend/dist"));
 
     app.get("*", (req, res) => {
-        res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
+        res.sendFile(path.join(_dirname, "../Frontend", "dist", "index.html"));
     })
 }
 
